@@ -6,7 +6,7 @@ let gridSize = 16;
 let rainbowMode = false;
 
 gridSelect.addEventListener('click', function() {
-    let size = parseInt(prompt("Enter a number between 1-100 to select the number of rows and columns the grid will have:"))
+    let size = parseInt(prompt("Enter a number between 1-100 to select the number of pixels in each row and column:"))
     console.log(size);
     if (isNaN(size)) {
         alert(`Please only enter numbers between 1-100`)
