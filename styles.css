@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     flex-direction: column;
+    background-color: #f9a875 ;
 }
 
 .gridContainer {
@@ -12,6 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #f5e9bf;
 }
 
 #grid {
@@ -20,6 +22,7 @@ body {
     flex-direction: column;
     width: 900px;
     height: 900px;
+    background-color: white;
 }
 
 .row {
@@ -35,7 +38,7 @@ body {
 }
 
 .header {
-    background-color: #653024;
+    background-color: #372a39 ;
     font-size: large;
     border: none;
     height: 50px;
@@ -48,12 +51,13 @@ body {
 
 button {
     font-size: larger;
-    background-color: #e7ceb5;
+    background-color: #aa644d;
     border-radius: 8px;
     border: 0;
     padding: 10px;
+    color: white;
 }
 
 button:hover {
-    background-color: #b0a192;
+    background-color: #788374;
 }
