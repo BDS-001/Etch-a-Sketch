@@ -48,11 +48,7 @@ function createGrid(gridSize) {
             const block = document.createElement('div')
             block.className = 'block'
             block.addEventListener('mouseover', function() {
-                if (rainbowMode === false) {
-                    block.style.backgroundColor = 'black'
-                } else {
-                    block.style.backgroundColor = randomColor();
-                }
+                colorBlock(block)
             })
             gridRow.appendChild(block)
         }
@@ -65,5 +61,12 @@ function randomColor() {
     return '#000000'.slice(0, -color.length) + color;
 }
 
+function colorBlock(block) {
+    if (rainbowMode === false) {
+        block.style.backgroundColor = 'black'
+    } else {
+        block.style.backgroundColor = randomColor();
+    }
+}
 
 createGrid(gridSize);
