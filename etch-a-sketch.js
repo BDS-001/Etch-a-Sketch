@@ -1,7 +1,9 @@
 const grid = document.querySelector('#grid')
 const gridSelect = document.querySelector('.selectSize')
 const gridClear = document.querySelector('.gridClear')
+const rainbowModeButton = document.querySelector('.rainbowMode')
 let gridSize = 16;
+let rainbowMode = false;
 
 gridSelect.addEventListener('click', function() {
     let size = parseInt(prompt("Enter a number between 1-100 to select the number of rows and columns the grid will have:"))
@@ -25,6 +27,18 @@ gridClear.addEventListener('click', function() {
     createGrid(gridSize);
 })
 
+rainbowModeButton.addEventListener('click', function() {
+    if (rainbowMode === false) {
+        rainbowMode = true;
+        rainbowModeButton.innerHTML = 'Raindbow Mode: ON'
+        rainbowModeButton.style.border = '5px solid yellow'
+    } else {
+        rainbowMode = false;
+        rainbowModeButton.innerHTML = 'Raindbow Mode: OFF'
+        rainbowModeButton.style.border = 'none'
+    }
+})
+
 function createGrid(gridSize) {
     for (i=0;i<gridSize;i++) {
         const gridRow = document.createElement('div')
@@ -34,12 +48,22 @@ function createGrid(gridSize) {
             const block = document.createElement('div')
             block.className = 'block'
             block.addEventListener('mouseover', function() {
-                block.style.backgroundColor = 'black'
+                if (rainbowMode === false) {
+                    block.style.backgroundColor = 'black'
+                } else {
+                    block.style.backgroundColor = randomColor();
+                }
             })
             gridRow.appendChild(block)
         }
         grid.appendChild(gridRow)
     }
 }
+
+function randomColor() {
+    var color = Math.floor(Math.random() * 16777216).toString(16);
+    return '#000000'.slice(0, -color.length) + color;
+}
+
 
 createGrid(gridSize);
