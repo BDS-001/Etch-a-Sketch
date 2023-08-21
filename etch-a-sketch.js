@@ -5,13 +5,18 @@ let gridSize = 16;
 
 gridSelect.addEventListener('click', function() {
     let size = parseInt(prompt("how many squars should the grid be?"))
-    if (size === NaN || size > 100) {
-        gridSize = 16
+    console.log(size);
+    if (isNaN(size)) {
+        alert(`Please only enter numbers between 1-100`)
+    } else if (size > 100) {
+        alert(`${size} is too high! Only enter numbers between 1-100`)
+    } else if (size < 1) {
+        alert(`${size} is too low! Only enter numbers between 1-100`)
     } else {
         gridSize = size;
+        grid.innerHTML = '';
+        createGrid(gridSize);
     }
-    grid.innerHTML = '';
-    createGrid(gridSize);
 })
 
 
