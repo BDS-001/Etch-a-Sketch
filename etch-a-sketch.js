@@ -4,7 +4,7 @@ const gridClear = document.querySelector('.gridClear')
 let gridSize = 16;
 
 gridSelect.addEventListener('click', function() {
-    let size = parseInt(prompt("how many squars should the grid be?"))
+    let size = parseInt(prompt("Enter a number between 1-100 to select the number of rows and columns the grid will have:"))
     console.log(size);
     if (isNaN(size)) {
         alert(`Please only enter numbers between 1-100`)
