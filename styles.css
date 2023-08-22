@@ -20,8 +20,8 @@ body {
     border: 5px solid black;
     display: flex;
     flex-direction: column;
-    width: 900px;
-    height: 900px;
+    width: 850px;
+    height: 850px;
     background-color: white;
 }
 
@@ -60,4 +60,11 @@ button {
 
 button:hover {
     background-color: #788374;
+}
+
+.footer {
+    height: 40px;
+    display: flex;
+    flex-shrink: 0;
+    background-color: #f5e9bf;
 }
