@@ -10,10 +10,6 @@ A browser-based drawing application inspired by the classic Etch-a-Sketch toy. T
 - **Rainbow Mode**: Toggle between standard black drawing and colorful rainbow mode
 - **Responsive Design**: Grid maintains its overall dimensions regardless of pixel density
 
-## Live Demo
-
-[View the live demo](#) (Add your deployment link when available)
-
 ## How to Use
 
 1. **Draw**: Simply hover your mouse over the grid to start drawing
